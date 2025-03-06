@@ -7,6 +7,7 @@ export default function Button() {
 
    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
+      setMsg("Testing...");
       try {
          await testPrismaConnection();
          setMsg("prisma en vercel correcto");
